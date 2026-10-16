@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crawler - Tin Tức 24h</title><link rel="stylesheet" href="css/style.css">
+</head><body data-page="crawler">
+<div id="header" class="header"></div>
+<main class="container"><div class="crawler" id="app">
+  <h1 class="page-title">Crawler tin tức</h1>
+  <p>Nhập URL một bài viết trên dantri.com.vn, hệ thống sẽ lấy nội dung, chuẩn hóa thành JSON và lưu vào LocalStorage.</p>
+  <form id="crawlForm">
+    <input type="url" id="urlInput" required placeholder="https://dantri.com.vn/bat-dong-san/...-20260928122246655.htm">
+    <button class="btn" id="crawlBtn" type="submit">Crawl</button>
+  </form>
+  <details style="margin:8px 0 12px">
+    <summary style="cursor:pointer;color:var(--red);font-weight:600">Cách dự phòng: nếu bấm Crawl bị lỗi, dán mã nguồn HTML của bài viết vào đây</summary>
+    <p style="font-size:14px;margin:8px 0">Mở bài viết trên dantri.com.vn → nhấn <b>Ctrl+U</b> → <b>Ctrl+A</b>, <b>Ctrl+C</b> → dán vào ô dưới → nhập đúng URL bài ở ô phía trên → bấm Crawl.</p>
+    <textarea id="htmlInput" rows="5" style="width:100%;padding:8px;border:1px solid #bbb;border-radius:4px" placeholder="Dán mã nguồn HTML (chỉ dùng khi proxy lỗi)"></textarea>
+  </details>
+  <div id="status" class="status"></div>
+  <pre class="json" id="result"></pre>
+  <div class="saved"><h3 class="section-h">Bài mới nhất trong LocalStorage</h3><div id="saved"></div>
+  <p style="margin-top:14px"><button class="btn sec" id="resetBtn" type="button">Reset dữ liệu mẫu</button></p></div>
+</div></main>
+<footer id="footer" class="footer"></footer>
+<script src="js/data.js"></script>
+<script src="js/crawler.js"></script>
+<script src="js/main.js"></script>
+</body></html>
