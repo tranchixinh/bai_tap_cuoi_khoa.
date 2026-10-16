@@ -1,11 +1,12 @@
 /* ===== Hàm crawl: nhận URL bài viết -> trả về object chuẩn hóa ===== */
+const WORKER = "https://dantri-proxy.24103163.workers.dev";
+
 const PROXIES = [
   // [hàm tạo URL, kiểu trả về]  "json" = {contents:"..."} ; "text" = HTML thô
-  [u => "https://api.allorigins.win/get?url=" + encodeURIComponent(u), "json"],
-  [u => "https://api.allorigins.win/raw?url=" + encodeURIComponent(u), "text"],
+  [u => WORKER + "/?url=" + encodeURIComponent(u), "text"],
   [u => "https://api.codetabs.com/v1/proxy?quest=" + encodeURIComponent(u), "text"],
-  [u => "https://thingproxy.freeboard.io/fetch/" + u, "text"],
-  [u => "https://corsproxy.io/?" + encodeURIComponent(u), "text"]
+  [u => "https://api.allorigins.win/get?url=" + encodeURIComponent(u), "json"],
+  [u => "https://api.allorigins.win/raw?url=" + encodeURIComponent(u), "text"]
 ];
 
 async function fetchHTML(url, onTry){
