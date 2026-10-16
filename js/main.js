@@ -22,12 +22,12 @@ function renderFooter(){
     tt:'<svg viewBox="0 0 24 24"><path d="M16.6 3h-2.9v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.9a5.6 5.6 0 1 0 4.7 5.5V9.2a7 7 0 0 0 4 1.3V7.6a4.1 4.1 0 0 1-4-4.6z"/></svg>'
   };
   document.getElementById("footer").innerHTML = `<div class="container"><div class="cols">
-    <div><h4>Tin Tức 24h</h4><p>Trang tin tức tổng hợp, cập nhật nhanh các sự kiện trong nước và quốc tế. Dự án bài tập lớn xây dựng web tin tức.</p></div>
+    <div><h4>Tin Tức 24h</h4><p>Trang tin tức tổng hợp, cập nhật nhanh các sự kiện trong nước và quốc tế. Dự án bài tập lớn xây dựng web tin tức.</p><p style="margin-top:8px">Môn: Xây dựng web</p><p>Sinh viên thực hiện: <b>Trần Kim Chi</b></p><p>Mã SV: <b>24103163</b></p></div>
     <div><h4>Liên kết nhanh</h4><ul><li><a href="index.html">Trang chủ</a></li><li><a href="index.html?cat=latest">Tin mới</a></li><li><a href="crawler.html">Crawler</a></li><li><a href="mailto:contact@tintuc24h.vn">Liên hệ</a></li></ul></div>
     <div><h4>Chuyên mục</h4><ul class="cat-list">${cats}</ul></div>
     <div><h4>Liên hệ</h4><p>Email: contact@tintuc24h.vn</p><p>Địa chỉ: Hà Nội, Việt Nam</p>
       <div class="social"><a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">${svg.fb}</a><a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">${svg.yt}</a><a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">${svg.tt}</a></div></div>
-  </div><div class="copy">© ${new Date().getFullYear()} Tin Tức 24h. Nguồn tin: dantri.com.vn (dùng cho mục đích học tập).</div></div>`;
+  </div><div class="copy">© ${new Date().getFullYear()} Tin Tức 24h - Trần Kim Chi (24103163). Nguồn tin: dantri.com.vn (dùng cho mục đích học tập).</div></div>`;
 }
 
 /* ---------- Các khối hiển thị bài viết ---------- */
